@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function NftModal(props) {
 
     const [showAttributes, setShowAttributes] = useState();
 
+    useEffect(() => {
+        document.getElementById('nft-modal').addEventListener('hidden.bs.modal', () => setShowAttributes(false));
+    });
+    
     function onShowAttributes() {
         setShowAttributes(show => !show);
     }
-
+    
     return (
         <div id="nft-modal" className="modal" tabIndex="-1">
             <div className="modal-dialog modal-xl">

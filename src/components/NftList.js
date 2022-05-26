@@ -33,7 +33,7 @@ function NftList(props) {
     }
 
     function onImageError(nftId) {
-      document.getElementById('preview-'+ nftId).src = 'https://caer.univ-amu.fr/wp-content/uploads/default-placeholder.png';
+      document.getElementById('preview-'+ nftId).src = '/image/placeholder.png';
       //document.getElementById('preview-'+ nftId).src = 'https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png';
     }
 

@@ -50,7 +50,7 @@ function App() {
     <div id="search"  className="d-flex justify-content-center">
       <div id ="search-form" className="w-75 shadow rounded-3 px-5 pt-4 pb-5 mt-5">
         <form onSubmit={process}>
-          <div id="title" className="mb-5 text-center">NFT Search</div>
+          <div id="title" className="mb-4 text-center">NFT Search</div>
           <div className="mb-4">
             <input type="text" id="input-search" className="form-control form-control-lg" placeholder="Search NFTs by name/description/attributes ..." autoComplete="off"/>
           </div>
@@ -72,7 +72,7 @@ function App() {
                   <span className="visually-hidden">Loading...</span>
                   </div>Searching
                 </button>
-              : <button type="submit" className="btn btn-primary btn-lg">Search NFTs</button>
+              : <button type="submit" className="btn btn-primary btn-lg"><i className="bi bi-search me-2"></i> Search NFTs</button>
             }
             </div>
           </div>
