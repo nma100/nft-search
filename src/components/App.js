@@ -45,36 +45,34 @@ function App() {
   }
 
   return (
-    <React.Fragment>
     <div className='container'>
     { screenMode === mode.search &&
-    <div id="search"  className="d-flex justify-content-center p-5">
-      <div className="w-75">
-        <div className="text-center mb-5">
-          <h1 className="fs-1">NFT Search</h1>
-        </div>
-        <form className="row g-3" onSubmit={process}>
-          <div className="col-8">
-            <input type="text" id="input-search" className="form-control" placeholder="Search NFTs by name/description/attributes ..." autoComplete="off"/>
+    <div id="search"  className="d-flex justify-content-center">
+      <div id ="search-form" className="w-75 shadow rounded-3 px-5 pt-4 pb-5 mt-5">
+        <form onSubmit={process}>
+          <div id="title" className="mb-5 text-center">NFT Search</div>
+          <div className="mb-4">
+            <input type="text" id="input-search" className="form-control form-control-lg" placeholder="Search NFTs by name/description/attributes ..." autoComplete="off"/>
           </div>
-          <div className="col-4">
+          <div className="mb-5">
+            <label htmlFor="select-chain" className="form-label">Blockchain</label>
             <select id="select-chain" className="form-select" style={{ cursor: 'pointer' }}>
-                <option value="eth">Blockchain : Ethereum</option>
-                <option value="bsc">Blockchain : Binance</option>
-                <option value="polygon">Blockchain : Polygon </option>
-                <option value="avalanche">Blockchain : Avalanche</option>
-                <option value="fantom">Blockchain : Fantom</option>
-              </select>
+                <option value="eth">Ethereum</option>
+                <option value="bsc">Binance</option>
+                <option value="polygon">Polygon </option>
+                <option value="avalanche">Avalanche</option>
+                <option value="fantom">Fantom</option>
+            </select>
           </div>
-          <div className="col-12">              
-            <div className="d-grid col-6 mx-auto my-4">
+          <div className="">              
+            <div className="d-grid col-4 mx-auto">
             {searching 
-              ? <button type="submit" className="btn btn-primary" disabled>          
+              ? <button type="submit" className="btn btn-primary btn-lg" disabled>          
                   <div className="spinner-border spinner-border-sm me-2" role="status">
                   <span className="visually-hidden">Loading...</span>
                   </div>Searching
                 </button>
-              : <button type="submit" className="btn btn-primary">Search NFTs</button>
+              : <button type="submit" className="btn btn-primary btn-lg">Search NFTs</button>
             }
             </div>
           </div>
@@ -85,8 +83,10 @@ function App() {
     { screenMode === mode.result &&
       <NftList searchQuery={searchQuery} blockchain={blockchain} searchResult={searchResult} />
     }
+    <div id="credits" className="text-center fs-5 mt-4 p-2">
+      Powered by : <a href="https://moralis.io/" className="text-reset">Moralis</a>
+    </div>
   </div>  
-  </React.Fragment>
   );
 }
 

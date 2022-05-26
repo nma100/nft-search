@@ -15,9 +15,6 @@ root.render(
     <MoralisProvider serverUrl={MoralisConfig.serverUrl} appId={MoralisConfig.appId}>
       <App />
     </MoralisProvider>
-    <div className="position-static bottom-0 text-center fs-5 py-3">
-      Powered by : <a href="https://moralis.io/" className="">Moralis</a>
-    </div>
   </React.StrictMode>
 );
 

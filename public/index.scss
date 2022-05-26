@@ -1,5 +1,43 @@
+/* import the necessary Bootstrap files */
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+$primary: $pink;
+
+$theme-colors: (
+    "primary": $primary
+);
+
 @import "bootstrap/scss/bootstrap";
-/* @import "bootstrap-icons/font/bootstrap-icons.scss"; */
+
+//body { background-color:  tint-color($primary, 95%); }
+//body { background-color:  $white; }
+body { background-color:  tint-color($primary, 98%); }
+
+#search-form { 
+    //background-color: $white; 
+    background-color:  tint-color($primary, 95%);
+    #title { 
+        font-size: 5.5rem !important; 
+        font-family: 'Times New Roman', Times, serif;
+        text-shadow: 1px 1px 2px $gray-300;
+        color: $primary;
+    }    
+}
 
 /* Search result */
-.nft-card { cursor: pointer;}
+#result-bar { background-color: tint-color($primary, 95%);}
+.nft-card { 
+    cursor: pointer;
+    .nft-title { color: $primary; }
+}
+
+
+#credits {
+    color: $primary;
+}
+
+/* NFT Modal */
+#nft-modal {
+    .nft-name { color: $primary; }
+}

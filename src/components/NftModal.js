@@ -26,7 +26,7 @@ function NftModal(props) {
                                 </div>
                                 <div className="col-8">
                                     <div className="mb-3">
-                                        <h2 className="mb-1">{ props.nft.metadata_name }</h2>
+                                        <h2 className="nft-name mb-1">{ props.nft.metadata_name }</h2>
                                         { props.nft.date_formatted &&
                                             <div className="text-muted">{ props.nft.date_formatted }</div>
                                         }

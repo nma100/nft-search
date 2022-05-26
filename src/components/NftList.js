@@ -40,7 +40,7 @@ function NftList(props) {
     return (
         <React.Fragment>
         <NftModal nft={selectedNft} />
-        <div className="bg-light fs-5 d-flex align-items-center sticky-top shadow-sm mb-4 px-3 py-2">
+        <div id="result-bar" className="fs-5 d-flex align-items-center sticky-top shadow-sm mb-4 px-3 py-2">
           <div>
             Search : <span className='text-muted'>{props.searchQuery}</span>
             <strong className="px-3">·</strong> 
@@ -55,7 +55,7 @@ function NftList(props) {
         <div id="result" className="row row-cols-4 g-3 mb-5">
           {nftList && nftList.map(nft => 
             <div className="col nft-card" key={nft.id} onClick={() => openModal(nft.id)}>
-              <div className="card h-100 shadow-sm">
+              <div className="card h-100 shadow">
                 { nft.metadata_obj &&
                 <img id={'preview-' + nft.id} src={nft.metadata_obj.image_url} 
                     className="card-img-top" 
@@ -70,7 +70,7 @@ function NftList(props) {
                       <span className="visually-hidden">Loading...</span>
                     </div>
                   </div>
-                  <h5 className="card-title mb-2">{nft.metadata_name}</h5>
+                  <h5 className="card-title mb-2 nft-title">{nft.metadata_name}</h5>
                 </div>
                 <div className="card-footer">
                   <div className="d-flex justify-content-between">
