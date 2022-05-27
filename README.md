@@ -1,28 +1,30 @@
-TODO
+# NFT Search
 
-Moteur recherche de nft : query, select bc, check filter
+This application allows the search of NFTs on a blockchain by name, description, metadata.
 
-Liste tableau, (preview image ?), click détail popup : image, metadata, owner list, price
+The NFTs corresponding to the criteria are returned with the possibility of seeing the detail in a popup.
 
-Compilation scss
-----------------
-npm run css-compile
+##How the application works
 
-Moralis endpoints
------------------
+The app relies on the [Moralis Web3 API](https://docs.moralis.io/moralis-dapp/web3-api/nft-api) to fetch NFTs data. This API is able to fetch different information such as block info, transaction info, NFT metadata, token prices, user balances from the main blockchains. 
 
-GET /nft/search : SearchNFTs Recherche de NFTs
+Others frameworks used on this development are :
+* [React](https://reactjs.org) : JavaScript library developed by Facebook which facilitates the creation of single-page web applications
+* [Bootstrap](https://getbootstrap.com) : CSS framework for responsive front-end development.
 
-GET /{address}/nft : GetNFTs - All NFT by user (ERC721 ou ERC1155)
-GET /{address}/nft/{token_address} : GetNFTsForContract - NFT(s) d'un user
-GET /{address}/nft/transfers : GetNFTTransfers - All NFT transfers for user
+## Build
 
-GET /nft/{address} : GetAllTokenIds - NFT(s)
-GET ​/nft​/{address}​/transfers : GetContractNFTTransfers - All transfers pour NFT(s)
-GET ​/nft​/{address}​/lowestprice : GetNFTLowestPrice - Lowest price sur derniers jours
-GET ​/nft​/{address}​/metadata : GetNFTMetadata - Metadata (Nom, contract type ...)
-GET ​/nft​/{address}​/owners : GetNFTOwners - Owner list
-GET ​/nft​/{address}​/trades : GetNFTTrades - Trades du NFT sur Opensea
-GET ​/nft​/{address}​/{token_id} : GetTokenIdMetadata - Metadata (where available), for the given token id of the given contrac
-GET ​/nft​/{address}​/{token_id}​/owners : GetTokenIdOwners - Owners pour un tokenID
-GET ​/nft​/{address}​/{token_id}​/owners : ?
+Install dependencies :
+```
+npm install
+```
+
+Create production build :
+```
+npm run build
+```
+
+Start development server :
+```
+npm start
+```
