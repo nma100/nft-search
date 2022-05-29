@@ -17,7 +17,7 @@ function App() {
   const [searchResult, setSearchResult] = useState();
   const [searching, setSearching] = useState();
 
-  const PER_PAGE = 8;
+  const PER_PAGE = 12;
 
   async function process(e) {
     e.preventDefault();
